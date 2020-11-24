@@ -1,0 +1,39 @@
+<ac:layout>
+  <ac:layout-section ac:type="single">
+    <ac:layout-cell>
+      <table class="wrapped">
+        <colgroup> <col/> <col/> </colgroup>
+        <tbody>
+          <tr>
+            <th>Account manager</th>
+            <td class="dsattr-manager dsvalidate-manager">
+            </td>
+          </tr>
+          <tr>
+            <th>Country</th>
+            <td class="dsattr-country dsvalidate-country">
+            </td>
+          </tr>
+          <tr>
+            <th>Address</th>
+            <td class="dsattr-address">
+              <ac:placeholder>Mailing address</ac:placeholder>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </ac:layout-cell>
+  </ac:layout-section>
+  <ac:layout-section ac:type="single">
+    <ac:layout-cell>
+      <ac:structured-macro ac:name="expand" ac:schema-version="1">
+        <ac:parameter ac:name="title">Unresolved issues</ac:parameter>
+        <ac:rich-text-body>
+          <p>
+            <ac:structured-macro ac:name="company-unresolved-issues" ac:schema-version="1"/>
+          </p>
+        </ac:rich-text-body>
+      </ac:structured-macro>
+    </ac:layout-cell>
+  </ac:layout-section>
+</ac:layout>

@@ -1,0 +1,53 @@
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <resource type="i18n" name="i18n" location="i18n/blueprint-validation-demo"/>
+
+    <content-template key="bvp-company-template"
+        template-title-key="com.mesilat.bvp.demo.company-template.title"
+        i18n-name-key="com.mesilat.bvp.demo.company-template.title">
+        <resource name="template" type="download" location="/xml/company.xml"/>
+        <context-provider class="com.mesilat.bvp.demo.CompanyContextProvider"/>
+    </content-template>
+    <blueprint key="bvp-company-blueprint" content-template-key="bvp-company-template" index-key="company-demo"/>
+    <web-item key="bvp-company-webitem" section="system.create.dialog/content"
+        i18n-name-key="com.mesilat.bvp.demo.company-link.title">
+        <description key="com.mesilat.bvp.demo.company-link.description"/>
+        <resource name="icon" type="download" location="/images/pluginLogo.png"/>
+        <param name="blueprintKey" value="bvp-company-blueprint"/>
+    </web-item>
+
+    <content-template key="bvp-contract-template"
+        template-title-key="com.mesilat.bvp.demo.contract-template.title"
+        i18n-name-key="com.mesilat.bvp.demo.contract-template.title">
+        <resource name="template" type="download" location="/xml/contract.xml"/>
+        <context-provider class="com.mesilat.bvp.demo.CompanyContextProvider"/>
+    </content-template>
+    <blueprint key="bvp-contract-blueprint" content-template-key="bvp-contract-template" index-key="contract-demo"/>
+    <web-item key="bvp-contract-webitem" section="system.create.dialog/content"
+        i18n-name-key="com.mesilat.bvp.demo.contract-link.title">
+        <description key="com.mesilat.bvp.demo.contract-link.description"/>
+        <resource name="icon" type="download" location="/images/pluginLogo.png"/>
+        <param name="blueprintKey" value="bvp-contract-blueprint"/>
+    </web-item>
+
+    <content-template key="bvp-product-template"
+        template-title-key="com.mesilat.bvp.demo.product-template.title"
+        i18n-name-key="com.mesilat.bvp.demo.product-template.title">
+        <resource name="template" type="download" location="/xml/product.xml"/>
+        <context-provider class="com.mesilat.bvp.demo.ProductContextProvider"/>
+    </content-template>
+    <blueprint key="bvp-product-blueprint" content-template-key="bvp-product-template" index-key="product-demo"/>
+    <web-item key="bvp-product-webitem" section="system.create.dialog/content"
+        i18n-name-key="com.mesilat.bvp.demo.product-link.title">
+        <description key="com.mesilat.bvp.demo.product-link.description"/>
+        <resource name="icon" type="download" location="/images/pluginLogo.png"/>
+        <param name="blueprintKey" value="bvp-product-blueprint"/>
+    </web-item>
+</atlassian-plugin>

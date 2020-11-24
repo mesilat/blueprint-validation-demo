@@ -1,0 +1,16 @@
+{
+  "name": "blueprint-validation-demo-test",
+  "version": "1.0.0",
+  "description": "Create a demo page set",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "confluence-client": "https://bitbucket.org/babinvn/confluence-client.git",
+    "https": "^1.0.0",
+    "soynode": "^2.1.0"
+  }
+}

@@ -1,0 +1,25 @@
+[ {
+  "code" : "product-category",
+  "name" : "Product category",
+  "type" : "LOFV",
+  "prompt" : "Product category",
+  "warning" : "Not a valid product category",
+  "text" : "Software development\nConsulting services\nSystem administration",
+  "module" : null
+}, {
+  "code" : "manager",
+  "name" : "Manager",
+  "type" : "USER",
+  "prompt" : "Manager",
+  "warning" : "invalid manager",
+  "text" : "",
+  "module" : null
+}, {
+  "code" : "business-unit",
+  "name" : "Business unit",
+  "type" : "LOFV",
+  "prompt" : "Business unit",
+  "warning" : "Not a valid business unit",
+  "text" : "UK headquarters\nUS department\nEuropean department",
+  "module" : null
+} ]

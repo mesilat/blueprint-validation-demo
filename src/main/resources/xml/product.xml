@@ -1,0 +1,39 @@
+<ac:layout>
+  <ac:layout-section ac:type="single">
+    <ac:layout-cell>
+      <table class="wrapped">
+        <colgroup> <col/> <col/> </colgroup>
+        <tbody>
+          <tr>
+            <th>Product category</th>
+            <td class="dsattr-category dsvalidate-product-category">
+            </td>
+          </tr>
+          <tr>
+            <th>Manager</th>
+            <td class="dsattr-manager dsvalidate-manager">
+            </td>
+          </tr>
+          <tr>
+            <th>Description</th>
+            <td class="dsattr-description">
+              <ac:placeholder>Provide product details</ac:placeholder>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </ac:layout-cell>
+  </ac:layout-section>
+  <ac:layout-section ac:type="single">
+    <ac:layout-cell>
+      <ac:structured-macro ac:name="expand" ac:schema-version="1">
+        <ac:parameter ac:name="title">Unresolved issues</ac:parameter>
+        <ac:rich-text-body>
+          <p>
+            <ac:structured-macro ac:name="product-unresolved-issues" ac:schema-version="1"/>
+          </p>
+        </ac:rich-text-body>
+      </ac:structured-macro>
+    </ac:layout-cell>
+  </ac:layout-section>
+</ac:layout>

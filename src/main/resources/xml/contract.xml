@@ -1,0 +1,59 @@
+<ac:layout>
+  <ac:layout-section ac:type="single">
+    <ac:layout-cell>
+      <table class="wrapped">
+        <colgroup> <col/> <col/> </colgroup>
+        <tbody>
+          <tr>
+            <th>Contract number</th>
+            <td class="dsattr-number">
+            </td>
+          </tr>
+          <tr>
+            <th>Contract date</th>
+            <td class="dsattr-contract-date dsvalidate-date">
+            </td>
+          </tr>
+          <tr>
+            <th>Contract end date</th>
+            <td class="dsattr-contract-end-date dsvalidate-date">
+            </td>
+          </tr>
+          <tr>
+            <th>Business unit</th>
+            <td class="dsattr-business-unit dsvalidate-business-unit">
+            </td>
+          </tr>
+          <tr>
+            <th>Amount</th>
+            <td class="dsattr-amount dsvalidate-amount">
+            </td>
+          </tr>
+          <tr>
+            <th>VAT</th>
+            <td class="dsattr-vat dsvalidate-amount">
+            </td>
+          </tr>
+          <tr>
+            <th>Customer</th>
+            <td class="dsattr-customer">
+              <ac:placeholder>Customer name</ac:placeholder>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </ac:layout-cell>
+  </ac:layout-section>
+  <ac:layout-section ac:type="single">
+    <ac:layout-cell>
+      <ac:structured-macro ac:name="expand" ac:schema-version="1">
+        <ac:parameter ac:name="title">Unresolved issues</ac:parameter>
+        <ac:rich-text-body>
+          <p>
+            <ac:structured-macro ac:name="contract-unresolved-issues" ac:schema-version="1"/>
+          </p>
+        </ac:rich-text-body>
+      </ac:structured-macro>
+    </ac:layout-cell>
+  </ac:layout-section>
+</ac:layout>
