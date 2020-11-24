@@ -1,11 +1,7 @@
-You have successfully created an Atlassian Plugin!
+# Blueprint Validation Demo Templates
 
-Here are the SDK commands you'll use immediately:
+This demo project is based on [Blueprint Validation](https://github.com/mesilat/blueprint-validation) plugin and provides three sample templates:
+for companies, contracts and products. It is intended to be used in pair with the
+[Companion plugin for JIRA](https://github.com/mesilat/blueprint-validation-demo-companion).
 
-* atlas-run   -- installs this plugin into the product and starts it on localhost
-* atlas-debug -- same as atlas-run, but allows a debugger to attach at port 5005
-* atlas-help  -- prints description for all commands in the SDK
-
-Full documentation is always available at:
-
-https://developer.atlassian.com/display/DOCS/Introduction+to+the+Atlassian+Plugin+SDK
+Whenever a page of type company, contract or product is created or updated the modifications are posted to JIRA. The data is then used in JIRA worklog OLAP cube.
