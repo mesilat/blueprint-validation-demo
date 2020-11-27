@@ -5,43 +5,55 @@
  * @param data
  */
 {template .company}
-<table class="wrapped">
-  <colgroup> <col/> <col/> </colgroup>
-  <tbody>
-    <tr>
-      <th>Title</th>
-      <td class="dsattr-title">{$data.title}</td>
-    </tr>
-    <tr>
-      <th>Position</th>
-      <td class="dsattr-position" style="text-align: right;">{$data.position}</td>
-    </tr>
-    <tr>
-      <th>Value, USD Bln</th>
-      <td class="dsattr-value" style="text-align: right;">{$data.value}</td>
-    </tr>
-    <tr>
-      <th>Assets, USD Bln</th>
-      <td class="dsattr-assets" style="text-align: right;">{$data.assets}</td>
-    </tr>
-    <tr>
-      <th>Sales, USD Bln</th>
-      <td class="dsattr-sales" style="text-align: right;">{$data.sales}</td>
-    </tr>
-    <tr>
-      <th>Profits, USD Bln</th>
-      <td class="dsattr-profits" style="text-align: right;">{$data.profits}</td>
-    </tr>
-    <tr>
-      <th>Country</th>
-      <td class="dsattr-country dsvalidate-country">
-        <div class="content-wrapper">
-          <ac:structured-macro ac:name="country" ac:schema-version="1">
-            <ac:parameter ac:name="code">{$data.country}</ac:parameter>
-          </ac:structured-macro>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<ac:layout>
+  <ac:layout-section ac:type="single">
+    <ac:layout-cell>
+      <table class="wrapped">
+        <colgroup> <col/> <col/> </colgroup>
+        <tbody>
+          <tr>
+            <th>Account manager</th>
+            <td class="dsattr-manager dsvalidate-manager">
+              <div class="content-wrapper">
+                <p>
+                  <ac:link>
+                    <ri:user ri:userkey="2c93808374ca15000174ca1b2a200000"/>
+                  </ac:link>
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>Country</th>
+            <td class="dsattr-country dsvalidate-country">
+              <div class="content-wrapper">
+                <ac:structured-macro ac:name="country" ac:schema-version="1">
+                  <ac:parameter ac:name="code">{$data.country}</ac:parameter>
+                </ac:structured-macro>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>Address</th>
+            <td class="dsattr-address">
+              <ac:placeholder>Mailing address</ac:placeholder>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </ac:layout-cell>
+  </ac:layout-section>
+  <ac:layout-section ac:type="single">
+    <ac:layout-cell>
+      <ac:structured-macro ac:name="expand" ac:schema-version="1">
+        <ac:parameter ac:name="title">Unresolved issues</ac:parameter>
+        <ac:rich-text-body>
+          <p>
+            <ac:structured-macro ac:name="company-unresolved-issues" ac:schema-version="1"/>
+          </p>
+        </ac:rich-text-body>
+      </ac:structured-macro>
+    </ac:layout-cell>
+  </ac:layout-section>
+</ac:layout>
 {/template}

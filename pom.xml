@@ -7,15 +7,15 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mesilat</groupId>
     <artifactId>blueprint-validation-demo</artifactId>
-    <version>0.1.1</version>
+    <version>1.0.0</version>
 
     <organization>
         <name>Mesilat Limited</name>
-        <url>https://www.mesilat.com/</url>
+        <url>https://www.mesilat.com/confluence-fields.html</url>
     </organization>
 
     <name>Blueprint Validation Demo Templates</name>
-    <description>This is the com.mesilat:blueprint-validation-demo plugin for Atlassian Confluence.</description>
+    <description>This plugin provides Compny, Contract and Product demo templates. Use with companion plugin for JIRA (https://github.com/mesilat/blueprint-validation-demo-companion)</description>
     <packaging>atlassian-plugin</packaging>
 
     <dependencies>

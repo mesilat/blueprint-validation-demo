@@ -1,4 +1,4 @@
-package com.mesilat.bvp;
+package com.mesilat.bvp.demo;
 
 import java.io.IOException;
 import java.text.ParseException;

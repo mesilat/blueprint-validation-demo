@@ -48,6 +48,7 @@ public class BaseEventListener implements InitializingBean, DisposableBean {
         });
         t.start();
         eventPublisher.register(this);
+        LOGGER.debug(String.format("Registered ValidateEvent listener for template %s", templateKey));
     }
     @Override
     public void destroy() throws Exception {
@@ -55,8 +56,12 @@ public class BaseEventListener implements InitializingBean, DisposableBean {
     }
     @EventListener
     public void dataObjectValidateEvent(DataValidateEvent event) {
-        if (!templateKey.equals(event.getTemplateKey()))
+        if (!templateKey.equals(event.getTemplateKey())) {
+            LOGGER.debug(String.format("DataValidateEvent for template=%s; handler is %s, aborting", event.getTemplateKey(), templateKey));
             return;
+        } else {
+            LOGGER.debug(String.format("DataValidateEvent for template=%s; processing...", event.getTemplateKey()));
+        }
 
         Page page = event.getPage();
         ConfluenceUser user = AuthenticatedUserThreadLocal.get();

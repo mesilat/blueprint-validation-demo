@@ -27,7 +27,7 @@
         template-title-key="com.mesilat.bvp.demo.contract-template.title"
         i18n-name-key="com.mesilat.bvp.demo.contract-template.title">
         <resource name="template" type="download" location="/xml/contract.xml"/>
-        <context-provider class="com.mesilat.bvp.demo.CompanyContextProvider"/>
+        <context-provider class="com.mesilat.bvp.demo.ContractContextProvider"/>
     </content-template>
     <blueprint key="bvp-contract-blueprint" content-template-key="bvp-contract-template" index-key="contract-demo"/>
     <web-item key="bvp-contract-webitem" section="system.create.dialog/content"
